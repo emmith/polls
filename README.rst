@@ -1,13 +1,12 @@
 Polls
 =====
 
-Example of polls project using aiohttp_, aiopg_ and aiohttp_jinja2_,
+a poll example of project using aiohttp_, aiopg_ , sqlalchemy_ and aiohttp_jinja2_
 similar to Django one.
 
 
 Preparations
 ------------
-
 Details could be found in `Preparations <https://github.com/aio-libs/aiohttp-demos/blob/master/docs/preparations.rst#environment>`_.
 
 In short.
@@ -31,7 +30,7 @@ Open browser::
 
     http://localhost:8080/
 
-.. image:: https://raw.githubusercontent.com/aio-libs/aiohttp-demos/master/docs/_static/polls.png
+.. image:: https://github.com/Crazyman001/polls/tree/master/aiohttpdemo_polls/static/images/polls.png
     :align: center
     :width: 460px
 
@@ -67,9 +66,10 @@ Requirements
 * aiohttp_
 * aiopg_
 * aiohttp_jinja2_
-
+* sqlalchemy_
 
 .. _Python: https://www.python.org
 .. _aiohttp: https://github.com/aio-libs/aiohttp
 .. _aiopg: https://github.com/aio-libs/aiopg
+.. _sqlalchemy: https://github.com/sqlalchemy/sqlalchemy
 .. _aiohttp_jinja2: https://github.com/aio-libs/aiohttp_jinja2
