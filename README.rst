@@ -1,16 +1,13 @@
 Polls
 =====
-
 a poll example of project using aiohttp_, aiopg_ , sqlalchemy_ and aiohttp_jinja2_
 similar to Django one.
-
 
 Preparations
 ------------
 Details could be found in `Preparations <https://github.com/aio-libs/aiohttp-demos/blob/master/docs/preparations.rst#environment>`_.
 
 In short.
-
 Run Postgres DB server::
 
     $ docker run --rm -it -p 5432:5432 postgres:10
@@ -25,6 +22,11 @@ Run
 Run application::
 
     $ python -m aiohttpdemo_polls
+
+
+if you want run in pycharm
+    1. run init_db.py
+    #. run main.py
 
 Open browser::
 
