@@ -1,6 +1,16 @@
-# views.py
-# 视图界面的handle
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+__author__ = 'Mr Wang'
+
+'''
+视图界面的handle
+'''
+
 import aiohttp_jinja2
+
+
+
 from aiohttp import web
 
 from . import db

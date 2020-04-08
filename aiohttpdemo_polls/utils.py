@@ -1,4 +1,9 @@
-# utils.py
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+__author__ = 'Mr Wang'
+
+
 import trafaret as T
 
 

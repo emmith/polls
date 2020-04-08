@@ -1,6 +1,16 @@
-'''数据库相关'''
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+__author__ = 'Mr Wang'
+
+
+'''
+数据库相关
+'''
+
 import aiopg.sa
 # aiopg 是一个用于从 asyncio 框架访问数据库的库。 它包装Psycopg数据库驱动程序的异步特性
+
 from sqlalchemy import (
     MetaData, Table, Column, ForeignKey,
     Integer, String, Date

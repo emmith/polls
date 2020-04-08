@@ -1,4 +1,8 @@
-# middlewares.py
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+__author__ = 'Mr Wang'
+
 import aiohttp_jinja2
 from aiohttp import web
 

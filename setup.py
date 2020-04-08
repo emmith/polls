@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+__author__ = 'Mr Wang'
+
 import os
 import re
 
@@ -21,7 +26,7 @@ def read_version():
 install_requires = ['aiohttp',
                     'aiopg[sa]',
                     'aiohttp-jinja2',
-                    'trafaret-config', 'sqlalchemy']
+                    'trafaret-config', 'sqlalchemy', 'PyYAML']
 
 
 setup(name='aiohttpdemo-polls',

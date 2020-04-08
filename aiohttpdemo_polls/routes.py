@@ -1,5 +1,10 @@
 # routes.py
-# 路由部分
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+__author__ = 'Mr Wang'
+
+
 import pathlib
 
 from .views import index, poll, results, vote

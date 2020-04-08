@@ -1,5 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-'''初始化数据库'''
+__author__ = 'Mr Wang'
+
+
+''' 
+初始化数据库 
+'''
+
 from sqlalchemy import create_engine, MetaData
 
 from aiohttpdemo_polls.db import question, choice
@@ -12,7 +20,8 @@ ADMIN_DB_URL = DSN.format(
     user='postgres', password='password', database='postgres',
     host='localhost', port=5432
 )
-# 管理员的连接
+
+# 管理员
 admin_engine = create_engine(ADMIN_DB_URL, isolation_level='AUTOCOMMIT')
 
 USER_CONFIG_PATH = BASE_DIR / 'config' / 'polls.yaml'
@@ -20,12 +29,14 @@ USER_CONFIG = get_config(['-c', USER_CONFIG_PATH.as_posix()])
 USER_DB_URL = DSN.format(**USER_CONFIG['postgres'])
 user_engine = create_engine(USER_DB_URL)
 
-# 测试用的
+# 测试
 TEST_CONFIG_PATH = BASE_DIR / 'config' / 'polls_test.yaml'
 TEST_CONFIG = get_config(['-c', TEST_CONFIG_PATH.as_posix()])
 TEST_DB_URL = DSN.format(**TEST_CONFIG['postgres'])
 test_engine = create_engine(TEST_DB_URL)
 
+
+# 初始化数据库
 # 包括建库，添加用户，设置密码，以及授权
 def setup_db(config):
 
@@ -41,6 +52,7 @@ def setup_db(config):
     conn.execute("GRANT ALL PRIVILEGES ON DATABASE %s TO %s" %
                  (db_name, db_user))
     conn.close()
+
 
 # 清除数据库
 def teardown_db(config):
@@ -87,6 +99,8 @@ if __name__ == '__main__':
     setup_db(USER_CONFIG['postgres'])
     create_tables(engine=admin_engine)
     sample_data(engine=admin_engine)
+
+    # 测试
     # setup_db(TEST_CONFIG['postgres'])
     # create_tables(engine=test_engine)
     # sample_data(engine=test_engine)
